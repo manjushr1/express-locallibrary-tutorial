@@ -10,13 +10,14 @@ var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" 
 
 var app = express();
 
+//test
 //Set up mongoose connection.  This code creates the default connection to the DB and binds to the error event
 //so that errors will be printed to the console. 
 var mongoose = require('mongoose');
 //var mongoDB = 'mongodb+srv://dbbpf:pbf6910@cluster0.d7lji.mongodb.net/local_library?retryWrites=true&w=majority;'
 
 // Set up mongoose connection for when app is in heroku!!!!
-var dev_db_url = 'mongodb+srv://dbbpf:pbf6910@cluster0.d7lji.mongodb.net/local_library?retryWrites=true&w=majority;'
+var dev_db_url = 'mongodb+srv://dbbpf:pbf6910@cluster0.d7lji.mongodb.net/local_library?retryWrites=true&w=majority'
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 mongoose.connect(mongoDB, { useNewUrlParser: true });
